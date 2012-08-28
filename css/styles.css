@@ -79,6 +79,7 @@ body {
 	padding: 10px 0;
 	-webkit-transition: all 1s;
 	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: bottom;
 }
 	.floor_activated {
 		-webkit-transform-origin: bottom;
@@ -93,6 +94,7 @@ body {
 		width: 278px;
 	}
 		.facelayer {
+			-webkit-transform-origin: bottom;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -112,7 +114,7 @@ body {
 				}
 			.floor_activated .face_activated {
 				-webkit-transform-origin: bottom;
-				-webkit-transform: translateZ(200px) rotateX(-90deg);
+				-webkit-transform: translatey(100px) translateZ(50px) rotateX(-90deg);
 			}
 			
 		.shadowlayer {
