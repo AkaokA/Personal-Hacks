@@ -1,0 +1,128 @@
+/* base styles */
+
+html {
+	height: 100% !important;
+}
+
+body {
+	background: #f4f4f4;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;	
+	height: 100% !important;
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	font-size: 14px;
+	line-height: 22px;
+	position: relative;	
+}
+
+#container {
+	width: 1200px;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	-webkit-perspective: 2000;
+	-webkit-transform-style: preserve-3d;
+}
+	
+	.col {
+		float: left;
+		padding: 0;
+		margin: 0 10px 0 10px;
+	}
+		.col .col {
+			margin: 0 10px 10px 0;		
+		}
+	
+.roundrect {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.border {
+	border: 1px solid #aaa;
+}
+
+.shadow {
+	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* layout styles */
+
+#header {
+	position: relative;
+	text-align: center;
+	padding: 20px;
+}
+
+	#go {
+		-webkit-transition: all 1s;
+		margin-left: auto;
+		margin-right: auto;
+		height: 18px;
+		width: 18px;
+		background: #888888;
+		
+	}
+		#go:hover {
+			background: #2fbbe9;
+			cursor: pointer;
+		}
+
+#shelf {
+	position: absolute;
+	top: 200px;
+	position: absolute;
+	background: #eee;
+	padding: 10px 0;
+	-webkit-transition: all 1s;
+	-webkit-transform-style: preserve-3d;
+}
+	.floor_activated {
+		-webkit-transform-origin: bottom;
+		-webkit-transform: translateY(200px) translateZ(-200px) rotateX(90deg);
+	}
+		.floor_activated .facelayer {
+		}
+
+	.tile {
+		position: relative;
+		height: 278px;
+		width: 278px;
+	}
+		.facelayer {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: #f4f4f4;
+			z-index: 100;
+			-webkit-transition: all 1s;
+		}
+			.facelayer:hover {
+				background: #999;
+			}
+			.face_activated {
+				background: #2fbbe9;
+			}
+				.face_activated:hover {
+					background: #2fbbe9;
+				}
+			.floor_activated .face_activated {
+				-webkit-transform-origin: bottom;
+				-webkit-transform: translateZ(200px) rotateX(-90deg);
+			}
+			
+		.shadowlayer {
+			position: absolute;
+			top: 0;
+			width: 270px;
+			height: 270px;
+			margin: 5px;
+			opacity: 0.5;
+			background: rgba(0,0,0,0.1);
+			-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			z-index: 0;
+		}
