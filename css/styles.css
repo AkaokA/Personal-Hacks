@@ -153,8 +153,8 @@ body {
 
 	.tile {
 		position: relative;
-		height: 278px;
-		width: 278px;
+		height: 280px;
+		width: 280px;
 	}
 		.facelayer {
 			-webkit-transform-origin: bottom;
