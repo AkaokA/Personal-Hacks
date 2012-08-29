@@ -18,9 +18,10 @@ body {
 	position: relative;	
 }
 
-#container {
+.container {
+	position: relative;
 	width: 1200px;
-	margin: 0 auto 0 auto;
+	margin: 0 auto 50px auto;
 	padding: 0;
 	-webkit-perspective: 2000;
 	-webkit-transform-style: preserve-3d;
@@ -49,6 +50,14 @@ body {
 	-webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 /* layout styles */
 
 #header {
@@ -72,9 +81,8 @@ body {
 		}
 
 #shelf {
-	position: absolute;
-	top: 200px;
-	position: absolute;
+	position: relative;
+	margin-top: 50px;
 	background: #eee;
 	padding: 10px 0;
 	-webkit-transition: all 1s;
@@ -83,7 +91,7 @@ body {
 }
 	.floor_activated {
 		-webkit-transform-origin: bottom;
-		-webkit-transform: translateY(200px) translateZ(-200px) rotateX(90deg);
+		-webkit-transform: translate3d(0,200px,-200px) rotate3d(1,0,0,90deg);
 	}
 		.floor_activated .facelayer {
 		}
@@ -114,7 +122,7 @@ body {
 				}
 			.floor_activated .face_activated {
 				-webkit-transform-origin: bottom;
-				-webkit-transform: translatey(100px) translateZ(50px) rotateX(-90deg);
+				-webkit-transform: translate3d(0,100px,50px) rotate3d(1,0,0,-90deg);
 			}
 			
 		.shadowlayer {
